@@ -9,18 +9,22 @@ int main(){
     while (ch!='D')
     {
         int i,j;
-        if(ch=='A'){
+        switch (ch)
+        {
+        case 'A':
             functionA(matrix);
-        }else if (ch=='B')
-        {
-            scanf("%d %d",i ,j);
+            createdismatrix(matrix);
+            break;
+        case 'B':
+            scanf("%d %d",&i ,&j);
             functionB(matrix, i,j);
-            printf("\n");
-        }else if (ch=='C')
-        {
-            scanf("%d %d",i ,j);
+            break;
+        case 'C':
+            scanf("%d %d",&i ,&j);
             functionC(matrix, i,j);
-            printf("\n");
+            break;
+        default:
+            break;
         }
         scanf("%c",&ch);
     }
